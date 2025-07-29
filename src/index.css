@@ -3,58 +3,71 @@
 @tailwind utilities;
 
 /* Empire Funded Design System - Professional Trading Firm Colors 
-All colors MUST be HSL.
+All colors MUST be HSL. Based on industry-leading prop firms.
 */
 
 @layer base {
   :root {
-    /* Main brand colors for professional trading firm */
-    --background: 220 26% 14%;
+    /* Main brand colors - Enhanced dark navy theme */
+    --background: 228 39% 7%;
     --foreground: 0 0% 100%;
 
-    --card: 220 23% 18%;
+    --card: 227 35% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 23% 18%;
+    --popover: 227 35% 10%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primary: Professional blue for CTAs and important elements */
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
+    /* Primary: Professional teal/cyan for CTAs */
+    --primary: 180 100% 45%;
+    --primary-foreground: 228 39% 7%;
+    --primary-glow: 180 100% 55%;
+    --primary-dark: 180 100% 35%;
 
-    /* Secondary: Elegant gold for accents */
-    --secondary: 45 100% 51%;
-    --secondary-foreground: 220 26% 14%;
+    /* Secondary: Professional gold for accents */
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 228 39% 7%;
 
-    --muted: 220 14% 25%;
+    --muted: 227 20% 15%;
     --muted-foreground: 220 9% 65%;
 
-    /* Accent: Sophisticated gold variant */
-    --accent: 45 93% 47%;
-    --accent-foreground: 220 26% 14%;
+    /* Accent: Sophisticated teal variant */
+    --accent: 180 84% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 14% 25%;
-    --input: 220 14% 25%;
-    --ring: 217 91% 60%;
+    --border: 227 20% 20%;
+    --input: 227 20% 15%;
+    --ring: 180 100% 45%;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 26% 14%) 0%, hsl(220 23% 18%) 50%, hsl(217 91% 15%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 23% 18%), hsl(220 20% 20%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 93% 47%));
+    /* Success colors for profits/metrics */
+    --success: 120 100% 40%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning for caution areas */
+    --warning: 45 100% 60%;
+    --warning-foreground: 228 39% 7%;
 
-    /* Professional shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 26% 14% / 0.4);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.2);
+    /* Professional gradients - Enhanced */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 45%), hsl(180 100% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(228 39% 7%) 0%, hsl(227 35% 10%) 30%, hsl(180 100% 8%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(227 35% 10%), hsl(227 30% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 93% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(120 100% 40%), hsl(120 80% 45%));
+    --gradient-overlay: linear-gradient(135deg, hsl(228 39% 7% / 0.95), hsl(180 100% 8% / 0.85));
 
-    /* Smooth animations */
+    /* Professional shadows - Enhanced */
+    --shadow-elegant: 0 10px 30px -10px hsl(180 100% 45% / 0.3);
+    --shadow-card: 0 8px 32px hsl(228 39% 7% / 0.6);
+    --shadow-glow: 0 0 60px hsl(180 100% 45% / 0.15);
+    --shadow-glow-strong: 0 0 80px hsl(180 100% 45% / 0.25);
+
+    /* Enhanced animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
