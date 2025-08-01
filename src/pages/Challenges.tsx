@@ -117,72 +117,130 @@ const Challenges = () => {
       {/* Challenge Selector */}
       <section className="py-20">
         <div className="container px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {challenges.map((challenge) => (
               <Card 
                 key={challenge.id} 
-                className={`relative border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg ${
-                  challenge.popular ? 'ring-2 ring-primary/20 shadow-lg' : ''
+                className={`relative group bg-gradient-to-br from-card to-card/50 backdrop-blur-sm border-2 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,255,255,0.1)] hover:border-primary/30 hover:-translate-y-2 ${
+                  challenge.popular 
+                    ? 'border-primary/40 shadow-[0_15px_35px_rgba(0,255,255,0.15)] scale-105' 
+                    : 'border-border/40 hover:border-primary/50'
                 }`}
               >
                 {challenge.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground">
-                    Most Popular
-                  </Badge>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-4 py-2 text-sm font-bold shadow-lg">
+                      🔥 Most Popular
+                    </Badge>
+                  </div>
                 )}
                 
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-2xl font-poppins">{challenge.name}</CardTitle>
-                  <div className="space-y-2">
-                    <div className="text-3xl font-bold text-primary">{challenge.price}</div>
-                    <div className="text-sm text-muted-foreground line-through">{challenge.originalPrice}</div>
+                {/* Card Header with enhanced styling */}
+                <CardHeader className="text-center pb-6 pt-8 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-50"></div>
+                  <div className="relative z-10">
+                    <div className="flex justify-center mb-4">
+                      <div className="p-3 rounded-full bg-primary/10 border border-primary/20">
+                        <DollarSign className="h-8 w-8 text-primary" />
+                      </div>
+                    </div>
+                    <CardTitle className="text-2xl font-bold font-poppins mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
+                      {challenge.name}
+                    </CardTitle>
+                    <div className="space-y-2">
+                      <div className="text-4xl font-extrabold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                        {challenge.price}
+                      </div>
+                      <div className="text-lg text-muted-foreground line-through opacity-75">
+                        {challenge.originalPrice}
+                      </div>
+                      <div className="inline-block px-3 py-1 bg-success/10 text-success text-sm font-semibold rounded-full border border-success/20">
+                        Save {Math.round((1 - parseInt(challenge.price.replace('$', '')) / parseInt(challenge.originalPrice.replace('$', ''))) * 100)}%
+                      </div>
+                    </div>
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Account Size</span>
-                      <span className="font-semibold">{challenge.accountSize}</span>
+                {/* Enhanced Card Content */}
+                <CardContent className="space-y-6 px-6 pb-6">
+                  {/* Key Metrics Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center p-3 bg-muted/30 rounded-lg border border-border/50">
+                      <div className="text-xs text-muted-foreground mb-1">Account Size</div>
+                      <div className="font-bold text-lg">{challenge.accountSize}</div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Profit Target</span>
-                      <span className="font-semibold text-primary">{challenge.profitTarget}</span>
+                    <div className="text-center p-3 bg-primary/5 rounded-lg border border-primary/20">
+                      <div className="text-xs text-muted-foreground mb-1">Profit Target</div>
+                      <div className="font-bold text-lg text-primary">{challenge.profitTarget}</div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Max Drawdown</span>
-                      <span className="font-semibold">{challenge.maxDrawdown}</span>
+                  </div>
+
+                  {/* Detailed Stats */}
+                  <div className="space-y-3 bg-muted/20 rounded-lg p-4 border border-border/30">
+                    <div className="flex justify-between items-center py-2 border-b border-border/20">
+                      <div className="flex items-center space-x-2">
+                        <Shield className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">Max Drawdown</span>
+                      </div>
+                      <span className="font-semibold text-sm">{challenge.maxDrawdown}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Daily Drawdown</span>
-                      <span className="font-semibold">{challenge.dailyDrawdown}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-border/20">
+                      <div className="flex items-center space-x-2">
+                        <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">Daily Drawdown</span>
+                      </div>
+                      <span className="font-semibold text-sm">{challenge.dailyDrawdown}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Trading Days</span>
-                      <span className="font-semibold">{challenge.tradingDays}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-border/20">
+                      <div className="flex items-center space-x-2">
+                        <Target className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">Trading Days</span>
+                      </div>
+                      <span className="font-semibold text-sm">{challenge.tradingDays}</span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center py-2 border-b border-border/20">
                       <span className="text-sm text-muted-foreground">Payouts</span>
-                      <span className="font-semibold">{challenge.payouts}</span>
+                      <span className="font-semibold text-sm">{challenge.payouts}</span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center py-2">
                       <span className="text-sm text-muted-foreground">Profit Split</span>
-                      <span className="font-semibold text-accent">{challenge.profitSplit}</span>
+                      <div className="flex items-center space-x-2">
+                        <span className="font-bold text-lg bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
+                          {challenge.profitSplit}
+                        </span>
+                        <div className="px-2 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full">
+                          YOU KEEP
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
+                  {/* Enhanced CTA Button */}
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full h-12 bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-primary-foreground font-bold text-lg shadow-[0_8px_20px_rgba(0,255,255,0.3)] hover:shadow-[0_12px_30px_rgba(0,255,255,0.4)] transition-all duration-300 hover:scale-105 border border-primary/20"
                     asChild
                   >
                     <a 
                       href="https://www.empirefundedcheckout.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
+                      className="group-hover:animate-pulse"
                     >
-                      Buy Challenge
+                      🚀 Start Challenge Now
                     </a>
                   </Button>
+                  
+                  {/* Trust Indicators */}
+                  <div className="flex justify-center space-x-4 text-xs text-muted-foreground pt-2">
+                    <div className="flex items-center space-x-1">
+                      <Check className="h-3 w-3 text-success" />
+                      <span>Instant Setup</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Check className="h-3 w-3 text-success" />
+                      <span>24/7 Support</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
