@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, DollarSign, Target, TrendingUp, Shield } from "lucide-react";
+import { Check, DollarSign, Target, TrendingUp, Shield, Flame, Rocket } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const Challenges = () => {
@@ -129,8 +129,9 @@ const Challenges = () => {
               >
                 {challenge.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <Badge className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-4 py-2 text-sm font-bold shadow-lg">
-                      🔥 Most Popular
+                    <Badge className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-4 py-2 text-sm font-bold shadow-lg flex items-center space-x-2">
+                      <Flame className="h-4 w-4" />
+                      <span>Most Popular</span>
                     </Badge>
                   </div>
                 )}
@@ -224,9 +225,10 @@ const Challenges = () => {
                       href="https://www.empirefundedcheckout.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group-hover:animate-pulse"
+                      className="group-hover:animate-pulse flex items-center justify-center space-x-2"
                     >
-                      🚀 Start Challenge Now
+                      <Rocket className="h-5 w-5" />
+                      <span>Start Challenge Now</span>
                     </a>
                   </Button>
                   
