@@ -130,17 +130,17 @@ const FAQs = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="general" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-4 mb-12 bg-secondary/50 backdrop-blur-sm">
-              <TabsTrigger value="general" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+            <TabsList className="grid w-full grid-cols-4 mb-12 bg-card border border-border backdrop-blur-sm">
+              <TabsTrigger value="general" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-foreground hover:text-primary">
                 General
               </TabsTrigger>
-              <TabsTrigger value="challenges" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+              <TabsTrigger value="challenges" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-foreground hover:text-primary">
                 Challenges
               </TabsTrigger>
-              <TabsTrigger value="platform" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+              <TabsTrigger value="platform" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-foreground hover:text-primary">
                 Platform
               </TabsTrigger>
-              <TabsTrigger value="affiliates" className="data-[state=active]:bg-primary data-[state=active]:text-white">
+              <TabsTrigger value="affiliates" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-foreground hover:text-primary">
                 Affiliates
               </TabsTrigger>
             </TabsList>
@@ -150,11 +150,11 @@ const FAQs = () => {
                 <h2 className="text-3xl font-bold mb-8 text-center text-primary">General Questions</h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   {generalFAQs.map((faq, index) => (
-                    <AccordionItem key={index} value={`general-${index}`} className="bg-card/50 backdrop-blur-sm border-primary/20 rounded-lg px-6">
-                      <AccordionTrigger className="text-left text-primary hover:text-primary-glow">
+                    <AccordionItem key={index} value={`general-${index}`} className="bg-card border border-border rounded-lg px-6">
+                      <AccordionTrigger className="text-left text-foreground hover:text-primary font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
+                      <AccordionContent className="text-card-foreground pt-2 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -168,11 +168,11 @@ const FAQs = () => {
                 <h2 className="text-3xl font-bold mb-8 text-center text-primary">Challenge Questions</h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   {challengeFAQs.map((faq, index) => (
-                    <AccordionItem key={index} value={`challenge-${index}`} className="bg-card/50 backdrop-blur-sm border-primary/20 rounded-lg px-6">
-                      <AccordionTrigger className="text-left text-primary hover:text-primary-glow">
+                    <AccordionItem key={index} value={`challenge-${index}`} className="bg-card border border-border rounded-lg px-6">
+                      <AccordionTrigger className="text-left text-foreground hover:text-primary font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
+                      <AccordionContent className="text-card-foreground pt-2 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -186,11 +186,11 @@ const FAQs = () => {
                 <h2 className="text-3xl font-bold mb-8 text-center text-primary">Trading Platform</h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   {platformFAQs.map((faq, index) => (
-                    <AccordionItem key={index} value={`platform-${index}`} className="bg-card/50 backdrop-blur-sm border-primary/20 rounded-lg px-6">
-                      <AccordionTrigger className="text-left text-primary hover:text-primary-glow">
+                    <AccordionItem key={index} value={`platform-${index}`} className="bg-card border border-border rounded-lg px-6">
+                      <AccordionTrigger className="text-left text-foreground hover:text-primary font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
+                      <AccordionContent className="text-card-foreground pt-2 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -204,11 +204,11 @@ const FAQs = () => {
                 <h2 className="text-3xl font-bold mb-8 text-center text-primary">Affiliate Program</h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   {affiliateFAQs.map((faq, index) => (
-                    <AccordionItem key={index} value={`affiliate-${index}`} className="bg-card/50 backdrop-blur-sm border-primary/20 rounded-lg px-6">
-                      <AccordionTrigger className="text-left text-primary hover:text-primary-glow">
+                    <AccordionItem key={index} value={`affiliate-${index}`} className="bg-card border border-border rounded-lg px-6">
+                      <AccordionTrigger className="text-left text-foreground hover:text-primary font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
+                      <AccordionContent className="text-card-foreground pt-2 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
