@@ -18,11 +18,11 @@ All colors MUST be HSL. Based on industry-leading prop firms.
     --popover: 227 35% 7%;
     --popover-foreground: 0 0% 98%;
 
-    /* Primary: Professional teal/cyan for CTAs - Enhanced contrast */
-    --primary: 180 100% 55%;
-    --primary-foreground: 228 39% 4%;
-    --primary-glow: 180 100% 65%;
-    --primary-dark: 180 100% 25%;
+    /* Primary: Professional teal/cyan for CTAs - High contrast for accessibility */
+    --primary: 180 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 180 75% 45%;
+    --primary-dark: 180 70% 25%;
 
     /* Secondary: Professional gold for accents - Enhanced contrast */
     --secondary: 45 100% 70%;
@@ -31,8 +31,8 @@ All colors MUST be HSL. Based on industry-leading prop firms.
     --muted: 227 20% 10%;
     --muted-foreground: 220 9% 75%;
 
-    /* Accent: Sophisticated teal variant - Enhanced contrast */
-    --accent: 180 84% 50%;
+    /* Accent: Sophisticated teal variant - High contrast */
+    --accent: 180 70% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 70%;
@@ -40,7 +40,7 @@ All colors MUST be HSL. Based on industry-leading prop firms.
 
     --border: 227 20% 25%;
     --input: 227 20% 12%;
-    --ring: 180 100% 55%;
+    --ring: 180 85% 35%;
 
     /* Success colors for profits/metrics - Enhanced contrast */
     --success: 120 100% 50%;
@@ -50,19 +50,19 @@ All colors MUST be HSL. Based on industry-leading prop firms.
     --warning: 45 100% 70%;
     --warning-foreground: 228 39% 4%;
 
-    /* Professional gradients - Enhanced */
-    --gradient-primary: linear-gradient(135deg, hsl(180 100% 45%), hsl(180 100% 55%));
+    /* Professional gradients - High contrast for accessibility */
+    --gradient-primary: linear-gradient(135deg, hsl(180 85% 35%), hsl(180 75% 45%));
     --gradient-hero: linear-gradient(135deg, hsl(228 39% 7%) 0%, hsl(227 35% 10%) 30%, hsl(180 100% 8%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(227 35% 10%), hsl(227 30% 12%));
     --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 93% 55%));
     --gradient-success: linear-gradient(135deg, hsl(120 100% 40%), hsl(120 80% 45%));
     --gradient-overlay: linear-gradient(135deg, hsl(228 39% 7% / 0.95), hsl(180 100% 8% / 0.85));
 
-    /* Professional shadows - Enhanced */
-    --shadow-elegant: 0 10px 30px -10px hsl(180 100% 45% / 0.3);
+    /* Professional shadows - High contrast */
+    --shadow-elegant: 0 10px 30px -10px hsl(180 85% 35% / 0.4);
     --shadow-card: 0 8px 32px hsl(228 39% 7% / 0.6);
-    --shadow-glow: 0 0 60px hsl(180 100% 45% / 0.15);
-    --shadow-glow-strong: 0 0 80px hsl(180 100% 45% / 0.25);
+    --shadow-glow: 0 0 60px hsl(180 75% 45% / 0.2);
+    --shadow-glow-strong: 0 0 80px hsl(180 75% 45% / 0.3);
 
     /* Enhanced animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

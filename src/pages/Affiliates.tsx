@@ -18,7 +18,7 @@ const Affiliates = () => {
             Earn competitive commissions by referring traders to Empire Funded. 
             Turn your network into a profitable partnership.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300">
+          <Button size="lg" variant="gradient">
             Join Now
           </Button>
         </div>
@@ -187,7 +187,7 @@ const Affiliates = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join our affiliate program today and start earning commissions from your referrals
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300">
+          <Button size="lg" variant="gradient">
             Join Our Affiliate Program
           </Button>
         </div>

@@ -24,10 +24,10 @@ const TradingPlatform = () => {
             Access global markets with lightning-fast execution and institutional-grade tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300">
+            <Button size="lg" variant="gradient">
               Start Trading Now
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
+            <Button variant="outline" size="lg">
               Download Platform
             </Button>
           </div>
@@ -153,19 +153,19 @@ const TradingPlatform = () => {
               <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Platform Downloads</h3>
                 <div className="space-y-4">
-                  <Button className="w-full justify-start bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white">
+                  <Button variant="gradient" className="w-full justify-start">
                     <Smartphone className="w-5 h-5 mr-3" />
                     Download for Windows
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" className="w-full justify-start">
                     <Smartphone className="w-5 h-5 mr-3" />
                     Download for Mac
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" className="w-full justify-start">
                     <Smartphone className="w-5 h-5 mr-3" />
                     Download Mobile App
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button variant="outline" className="w-full justify-start">
                     <Globe className="w-5 h-5 mr-3" />
                     Web Platform
                   </Button>
@@ -184,10 +184,10 @@ const TradingPlatform = () => {
             Join thousands of successful traders using our advanced platform to manage funded accounts
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300">
+            <Button size="lg" variant="gradient">
               Get Your Funded Account
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
+            <Button variant="outline" size="lg">
               Try Demo Account
             </Button>
           </div>

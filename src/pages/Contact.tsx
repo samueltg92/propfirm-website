@@ -101,7 +101,8 @@ const Contact = () => {
                   
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300"
+                    variant="gradient"
+                    className="w-full"
                   >
                     Send Message
                   </Button>
@@ -170,7 +171,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       Check out our comprehensive FAQ section for instant answers to common questions.
                     </p>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                    <Button variant="outline">
                       Visit FAQ Section
                     </Button>
                   </div>
@@ -190,10 +191,10 @@ const Contact = () => {
             From technical assistance to trading guidance, we're always ready to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-glow transition-all duration-300">
+            <Button size="lg" variant="gradient">
               Start Your Journey
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
+            <Button variant="outline" size="lg">
               Join Our Community
             </Button>
           </div>
