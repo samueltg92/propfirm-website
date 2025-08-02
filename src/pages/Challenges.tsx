@@ -3,9 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Check, DollarSign, Target, TrendingUp, Shield, Flame, Rocket } from "lucide-react";
 import Layout from "@/components/Layout";
+import { usePageTracking } from "@/hooks/useTracking";
+import { trackingEvents } from "@/lib/tracking";
 
 const Challenges = () => {
-  // Mock data - In production, this would come from WooCommerce API
+  // Track page view
+  usePageTracking('Challenges');
+
+  // Static challenge data - no API dependency
   const challenges = [
     {
       id: 1,
@@ -226,6 +231,7 @@ const Challenges = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group-hover:animate-pulse flex items-center justify-center space-x-2"
+                      onClick={() => trackingEvents.challengeClick(challenge.name, challenge.price)}
                     >
                       <Rocket className="h-5 w-5" />
                       <span>Start Challenge Now</span>

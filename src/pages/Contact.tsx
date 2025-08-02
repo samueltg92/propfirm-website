@@ -6,8 +6,13 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { usePageTracking } from "@/hooks/useTracking";
+import { trackingEvents } from "@/lib/tracking";
 
 const Contact = () => {
+  // Track page view
+  usePageTracking('Contact');
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +29,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Track form submission
+    trackingEvents.contactFormSubmit();
     const mailtoLink = `mailto:support@empirefunded.com?subject=Contact Form Submission from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
     window.location.href = mailtoLink;
   };
