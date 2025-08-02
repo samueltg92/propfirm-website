@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
+import tradingHeroBg from "@/assets/trading-hero-bg.png";
 
 const Home = () => {
   const features = [
@@ -83,8 +84,13 @@ const Home = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Professional trading background with overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/95" />
+        {/* Professional trading background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08]" 
+          style={{ backgroundImage: `url(${tradingHeroBg})` }}
+        />
+        {/* Enhanced overlay for optimal text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/95 to-background/98" />
         
         <div className="container px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
